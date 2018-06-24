@@ -1,0 +1,628 @@
+/************
+ * 页面样式
+ ************/
+
+/* =========
+    基本默认值
+   =========*/
+
+html{
+    font-size: 62.5%;
+    /* font-size: 62.5%;  (10/16*100%) 1rem=10px
+       font-size:100%; 1rem=16px
+     1px 1个像素
+     rem 相对的长度单位
+     rem 相对参照物为父元素的font-size,当没有设置font-size时,浏览器会有一个默认的em设置:1em=16px
+     rem 具有继承的特点,容易混乱
+     rem 相对参照物是根元素(html)的font-size,默认是1rem=16px
+     em只是比rem的兼容性更好
+
+    */
+    color: #222;
+}
+
+::selection{
+    background-color: #b3d4fc;
+    /*background-color: red;*/
+    text-shadow: none;
+    /*向文本设置阴影*/
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+/* =========
+    工具样式
+   =========*/
+
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right{
+    float: right !important;
+    /*!important 优于元素本身的样式设置,优先级别最高*/
+}
+
+.pull-left{
+    float: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.hide{
+    display: none !important;
+    /*会占用隐藏的空间*/
+}
+
+.show{
+    display: block !important;
+}
+
+.invisible{
+    visibility: hidden;
+    /*不会挤占隐藏空间*/
+}
+
+.text-hide{
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.clearfix:before,.clearfix:after{
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+/*IE6 IE7*/
+.clearfix{
+    zoom: 1;
+}
+
+
+/* =========
+    浏览器更新提示
+   =========*/
+
+.browseupdate{
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+
+/* =========
+    自定义页面样式
+   =========*/
+
+body{
+    font-size: 1.2rem;
+    /* 12px*/
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover,a:active{
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/* =========
+    布局网页样式
+   =========*/
+
+/* 网站头部 */
+header{
+    width: 100%;
+}
+
+header .top{
+    line-height: 3rem; /* 36px chrome*/
+    /*当在chrome中 有中文字符时,如果1rem<12px,则chrome会使用默认1rem=12px */
+    padding: 0 1.5rem;
+    color: #fff;
+    background: #555;
+    border-bottom: 1px #ecc000 solid;
+}
+
+header .top .tel{
+    float: left;
+}
+
+header .top ul{
+    text-align: right;
+}
+
+header .top ul li{
+    display: inline-block;
+}
+
+header .top ul li + li{
+    /* li + li:不包含第一个li */
+    border-left: 1px solid #999;
+    margin-left: -3px;
+    /* 解决内联元素间隙 */
+}
+
+header .top ul li a{
+    display: inline-block;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+/* 媒体查询 不是根据html的font-size来设置的 而是按1rem=16px来设置的 50rem=800px 30rem=480px
+em比rem兼容性更好*/
+@media only screen and (max-width: 50em){
+    /*header .top{*/
+        /*background-color: green;*/
+    /*}*/
+    header .top ul li a{
+        padding: 0 1rem;
+    }
+}
+/*继承第一个 30.0625em=481px*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    /*header .top ul li a{*/
+        /*color: red;*/
+    /*}*/
+
+}
+/*继承第一个*/
+@media only screen and (max-width: 30em){
+    /*header .top ul li a{*/
+        /*color: blue;*/
+    /*}*/
+    header .top .tel,
+    header .top ul li:nth-child(3),
+    header .top ul li:nth-child(4){
+        display: none;
+    }
+
+}
+header .main{
+    padding: 0;
+}
+
+header .main .brand{
+    float: left;
+    padding: 1rem 1.25rem 0;
+}
+
+header .main ul{
+    text-align: right;
+}
+
+header .main ul li{
+    display: inline-block;
+    border-left: 1px solid #f0ede9;
+    /*padding: 1rem 1.25rem;*/
+}
+
+header .main ul li a{
+    display: inline-block;
+    padding: 0 3rem;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #7c7a65;
+    text-decoration: none;
+}
+
+header .main ul li a:hover,
+header .main ul li a:active,
+header .main ul li a.active{
+    color: #ffb300;
+    background-color: #f8f6f1;
+}
+
+
+
+
+
+/* 网站主要内容 */
+.container{
+    width: 100%;
+}
+
+.container .transaction{
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: #7c7365;
+}
+
+.container .trans-data{
+    float: left;
+    padding: 1rem;
+    text-align: left;
+}
+
+.trans-data span{
+    display: inline-block;
+    line-height: 3rem;
+    color: #fff;
+}
+.container .trans-data .trans-money{
+    font-size: 2.2rem;
+    color: #ff9900;
+    letter-spacing: 3px;
+    /* 字与字之间的空格数 */
+    margin: 0 1rem;
+    padding: 0 1rem;
+
+    box-shadow: inset 1px 2px 1px #333;
+    /*box-shadow: inset hoff voff blur #000;*/
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.9);
+    /* 0.9图片透明度 */
+}
+
+.trans-report{
+    text-align: right;
+    padding: 1rem;
+    line-height: 3rem;
+    color: #fff;
+}
+
+/*第三方组件 使用人数,活跃性,轻便性  */
+/* 滚动广告 OwlCarousel2*/
+.ad{
+    /*display: none;*/
+}
+/*响应式图片:不仅仅改变图片的排版和布局,还会根据设备大小加载不同的图片: Picturefill
+SVG图片在线压缩: https://iconizr.com/
+PNG,JPG图片在线压缩: https://tinypng.com/
+*/
+
+
+.feature{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 0;
+    /* 解决内联元素间隙 */
+}
+
+.feature .item{
+    display: inline-block;
+    width: calc(33.33333333333% - 3rem);
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.feature .item + .item{
+    margin-left: 1.5rem;
+}
+
+.feature .item h3{
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    vertical-align: top;
+    font-size: 3.8rem;
+    text-align: center;
+    color: #ff9900;
+}
+.feature .item p{
+    display: inline-block;
+    width: 55%;
+    margin: 0;
+    padding: 0;
+    color: #999;
+}
+
+/*最新公告*/
+.notice{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px #cccccc;
+}
+
+.notice a{
+    float: left;
+    display: inline-block;
+    width: 70%;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+/*不管a标签的文字有多长 进行不换行截断*/
+.notice a:first-child{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.notice a:first-child:before{
+    content: '最新公告： \00a0\00a0';
+    color: #aaa;
+}
+
+.notice a span{
+    color: #999999;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.notice a.more{
+    float: right;
+    width: auto;
+    margin-right: 2rem;
+    color: #ff9900;
+}
+
+
+/* 产品列表 */
+.product{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    background-color: #f5f9fa;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 0 4px #cccccc;
+}
+
+.product h2{
+    float: left;
+    width: 20%;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #635c51;
+}
+
+.product h2 em{
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+.product h2 em:first-child{
+    margin-top: 4rem;
+}
+
+.product .product-content{
+    float: right;
+    width: 79.5%;
+    border-left: 1px solid #eeeeee;
+    background-color: #ffffff;
+}
+
+.product .product-content .item{
+    width: 100%;
+}
+
+.product .product-content .item + .item{
+    border-top: 1px solid #eeeeee;
+}
+
+.product .product-content .item h3{
+    float: left;
+    width: 30%;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.product .product-content .item h3 em{
+    margin-right: 0.5rem;
+    font-size: 3.6rem;
+    font-style: normal;
+    color: #8b999d;
+}
+
+/*.product .product-content .item h3 i{*/
+    /*display: block;*/
+    /*font-size: 1.2rem;*/
+    /*font-style: normal;*/
+    /*color: #999999;*/
+/*}*/
+
+
+.product .product-content .item .info{
+    float: left;
+    width: 48%;
+    padding: 1rem;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    font-size: 14px;
+}
+
+.product .product-content .item .info p{
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 56%;
+}
+
+.product .product-content .item .info p:last-child{
+    width: 40%;
+}
+
+
+.product .product-content .item .info p span{
+    display: block;
+    font-size: 2.4rem;
+    color: #ff9900;
+}
+.product .product-content .item .info p span i{
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #999999;
+}
+
+.product .product-content .item .buy{
+    float: left;
+    width: calc(22% - 4.2rem); /* 4.4 */
+    padding: 1rem;
+}
+
+.product .product-content .item .buy a{
+    display: block;
+    width: 90%;
+    margin: 1.5rem auto;
+    max-width: 12rem;
+    line-height: 4rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff9900;
+    border-radius: 5px;
+}
+.product .product-content .item .buy a:hover,
+.product .product-content .item .buy a:active{
+    background-color: #ffc468;
+}
+
+.product .product-content .item .buy a:disabled{
+    background-color: #cccccc !important;
+    cursor: not-allowed;
+}
+
+
+
+.footer{
+    padding: 3rem 0;
+    background-color: #ffffff;
+    border-top: 2px solid #eeeeee;
+}
+
+.footer-content{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content .brand{
+    float: left;
+    display: block;
+    filter: grayscale(100%);
+    /*https://autoprefixer.github.io/*/
+    width: 20%;
+    height: 35px;
+    background: url("../img/logo@1x.png") no-repeat left;
+    background-size: 150px 35px;
+}
+
+.footer-content ul{
+    float: left;
+    width: 15%;
+}
+
+.footer-content ul li{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.footer-content ul li.title{
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+
+
+
+
+/* 底部导航 */
+
+footer{
+    width: 100%;
+    padding: 3rem 0 5rem;
+    background-color: #ededed;
+}
+
+footer ul{
+    text-align: center;
+}
+
+footer ul li{
+    display: inline-block;
+}
+
+footer ul li .icon{
+    display: inline-block;
+    text-indent: -999rem;
+    margin-right: 1.5rem;
+    background: url("https://i.alipayobjects.com/e/201307/jebmKcbrh.png") no-repeat;
+    background-size: 466px 447px;
+    overflow: hidden;
+}
+
+footer ul li .icon-zf{
+    width: 38px;
+    height: 27px;
+    background-position: -369px -45px;
+}
+
+footer ul li .icon-pcirk{
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+
+footer ul li .icon-visa{
+    width: 36px;
+    height: 27px;
+    background-position: -426px -90px;
+}
+
+footer ul li .icon-vsjmfw{
+    width: 63px;
+    height: 27px;
+    margin-right: 13px;
+    background-position: -401px -186px;
+}
+
+footer ul li .icon-wlgs{
+    width: 27px;
+    height: 27px;
+    background-position: -48px -48px;
+}
+footer ul li .icon-rzcx{
+    width: 75px;
+    height: 27px;
+    background-position: 0 -320px;
+}
+footer ul li .icon-gs{
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    background: url("https://os.alipayobjects.com/rmsportal/lybcjqloSPjMAFg.png") no-repeat;
+    background-size: 30px;
+}
+
+footer p{
+    text-align: center;
+}

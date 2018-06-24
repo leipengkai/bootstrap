@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- ie=edge:表示强制以最新的IE浏览器模式 渲染页面-->
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="js/vendor/owlcarousel/assets/owl.carousel.min.css">
+    <!--<link rel="stylesheet" href="js/vendor/owlcarousel/assets/owl.theme.default.min.css">-->
+    <link rel="stylesheet" href="js/vendor/owlcarousel/assets/owl.theme.green.css">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <nav class="top">
+        <span class="tel">:400-888</span>
+        <!--ul>li*5>a-->
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">快速注册</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">APP下载</a></li>
+        </ul>
+    </nav>
+    <!--nav.main>a.brand>img-->
+    <nav class="main">
+        <!--必不可少的图片使用<img>引入,可有可无的装饰性图片可以用标签的style引入-->
+        <a href="#" class="brand"><img src="img/logo@1x.png" alt="返回首页"></a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">热销</a></li>
+            <li><a href="#">新品</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#">客服</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="transaction clearfix">
+        <div class="trans-content">
+            <div class="trans-data">
+                <span>平台成交金额</span>
+                <span class="trans-money">18999</span>
+                <span>万元</span>
+            </div>
+            <div class="trans-data">
+                <span>平台成交金额</span>
+                <span class="trans-money">18999</span>
+                <span>万元</span>
+            </div>
+            <div class="trans-report">
+                <a href="#">成交报告</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ad">
+ <!-- 响应式广告 -->
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad001-l.png" media="(min-width:50em)">
+                    <source srcset="img/ad001-m.png" media="(min-width:30em)">
+                    <img src="img/ad001.png" alt="1">
+                </picture>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad002-l.png" media="(min-width:50em)">
+                    <source srcset="img/ad002-m.png" media="(min-width:30em)">
+                    <img src="img/ad002.png" alt="2">
+                </picture>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad003-l.png" media="(min-width:50em)">
+                    <source srcset="img/ad003-m.png" media="(min-width:30em)">
+                    <img src="img/ad003.png" alt="3">
+                </picture>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="feature">
+        <div class="item">
+            <h3>高档</h3>
+            <p>专注轻奢女包品牌</p>
+        </div>
+        <div class="item">
+            <h3>实惠</h3>
+            <p>专注轻奢女包品牌</p>
+        </div>
+        <div class="item">
+            <h3>美观</h3>
+            <p>专注轻奢女包品牌</p>
+        </div>
+    </section>
+
+    <section class="notice clearfix">
+        <a href="#"><span>2018-04-21</span>专注轻奢女包品牌</a>
+        <a href="#" class="more"></a>
+    </section>
+
+    <section class="product clearfix">
+        <h2>
+
+            <em>高档</em>
+            <em>实惠</em>
+            <em>美观</em>
+        </h2>
+        <div class="product-content">
+             <div class="item clearfix">
+                 <h3><em>3个月</em></h3>
+                 <div class="info">
+                     <p><span class=""> </span><i>轻奢</i>女包品牌 </p>
+                 </div>
+                 <div class="buy">
+                     <a href="#">购买</a>
+                 </div>
+             </div>
+            <div class="item clearfix">
+                <h3><em>6个月</em></h3>
+                <div class="info">
+                    <p><span class=""> </span><i>轻奢</i>女包品牌 </p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <div class="footer-content clearfix">
+            <p class="brand"></p>
+            <ul>
+                <li class="title">关于我们 </li>
+                <li href="#">公司介绍</li>
+                <li href="#">业务模式</li>
+                <li href="#">合作机构</li>
+                <li href="#">服务协议</li>
+            </ul>
+            <ul>
+                <li class="title">合作机构 </li>
+                <li href="#">公司介绍</li>
+                <li href="#">业务模式</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <ul>
+        <li><span class="icon icon-zf">1</span></li>
+        <li><span class="icon icon-pcirk">2</span></li>
+        <li><span class="icon icon-visa">3</span></li>
+        <li><span class="icon icon-vsjmfw">4</span></li>
+        <li><span class="icon icon-wlgs">5</span></li>
+        <li><span class="icon icon-rzcx">6</span></li>
+        <li><span class="icon icon-gs">7</span></li>
+    </ul>
+    <p> 版权所有 @ 2018</p>
+</footer>
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="js/vendor/jquery-3.3.1.js"></script>
+
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vendor/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/vendor/picturefill.min.js"></script>
+<script src="js/main.js"></script>
+
+
+<nav></nav>
+<article></article>
+<section></section>
+
+<!--加粗,引人注意-->
+<b></b>
+<!--重要,强调-->
+<em></em>
+<i></i>
+
+</body>
+</html>
+<!--一般都是使用class定义样式(top-button),id一般用于js快速的区别和获取元素class(topButton)-->

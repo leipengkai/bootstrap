@@ -1,0 +1,1793 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>创业的第一个春天 - 丁亮的个人博客</title>
+    <meta name="keywords" content="创业,分享,链书">
+    <meta name="description" content="3 月份家里蹲之后，好几个早晨洗漱都会留鼻血，昆明的春天实在太干燥了。 健康 3 月下旬因为气胸住院了一个星期，自我感觉良好后就要求出院了。养到现在感觉已无大碍，只是不敢怎么运动了（说得自己之前多爱运动一样 ）。 一年多没体检了，所幸这次住院检查没查出什么不治之症。住院才知道钱花的快，病不起啊！所以，其实人最重要的事情是保护好身体，别生病。 保持身心健康在所有事情里面排第一位。 B3log 开源 B3log 开源的主要产品基本是每两个星期发布一个版本。虽然之前 Sym、Solo 作为业余时间的项目陆续开发好多年了，但现在感觉还是存在很大的改进空间。最近发布频繁网络上曝光比较多，用户多了起来，反馈的问题也变多了。 当然，这是一件非常好的事情，我想无论对我还是对项目而言，这都是从业余到专业的转变，继续保持下去吧 链书本来计划 4 月份上线的，现在我可以确定 4 月份是上不了了，也不打算挣扎了，5 月份见。 关于收入 托朋友的福，我和 V 接了个外包，加上卖 Sym 商业授权，这两个月的收入还算过得去，但不稳定是个大....">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="丁亮的个人博客">
+    <meta name="generator" content="Solo">
+    <meta name="owner" content="B3log Team">
+    <meta name="revised" content="丁亮的个人博客, 2018">
+    <meta name="copyright" content="B3log">
+    <meta http-equiv="Window-target" content="_top">
+    <link type="text/css" rel="stylesheet" href="https://static-solo.b3log.org/skins/9IPHP/css/base.min.css?1524771016432" charset="utf-8">
+    <link href="https://88250.b3log.org/blog-articles-rss.do" title="RSS" type="application/rss+xml" rel="alternate">
+    <link rel="icon" type="image/png" href="https://88250.b3log.org/favicon.png">
+    <script src="//hm.baidu.com/hm.js?be2bcb3d215a3d3842149cbb23c14dbb"></script><script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?be2bcb3d215a3d3842149cbb23c14dbb";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <link rel="prev" title="MySQL 迁移 utf8 到 utf8mb4" href="https://88250.b3log.org/articles/2018/03/15/1521094110639.html">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="创业的第一个春天">
+    <meta property="og:description" content="3 月份家里蹲之后，好几个早晨洗漱都会留鼻血，昆明的春天实在太干燥了。 健康 3 月下旬因为气胸住院了一个星期，自我感觉良好后就要求出院了。养到现在感觉已无大碍，只是不敢怎么运动了（说得自己之前多爱运动一样 ）。 一年多没体检了，所幸这次住院检查没查出什么不治之症。住院才知道钱花的快，病不起啊！所以，其实人最重要的事情是保护好身体，别生病。 保持身心健康在所有事情里面排第一位。 B3log 开源 B3log 开源的主要产品基本是每两个星期发布一个版本。虽然之前 Sym、Solo 作为业余时间的项目陆续开发好多年了，但现在感觉还是存在很大的改进空间。最近发布频繁网络上曝光比较多，用户多了起来，反馈的问题也变多了。 当然，这是一件非常好的事情，我想无论对我还是对项目而言，这都是从业余到专业的转变，继续保持下去吧 链书本来计划 4 月份上线的，现在我可以确定 4 月份是上不了了，也不打算挣扎了，5 月份见。 关于收入 托朋友的福，我和 V 接了个外包，加上卖 Sym 商业授权，这两个月的收入还算过得去，但不稳定是个大....">
+    <meta property="og:image" content="https://img.hacpai.com/avatar/1353745196354_1500432853138.png?imageView2/1/w/242/h/242/interlace/0/q/100&amp;timestamp=1506571819270">
+    <meta property="og:url" content="https://88250.b3log.org/articles/2018/04/20/1524191993505.html">
+    <meta property="og:site_name" content="Solo">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="3 月份家里蹲之后，好几个早晨洗漱都会留鼻血，昆明的春天实在太干燥了。 健康 3 月下旬因为气胸住院了一个星期，自我感觉良好后就要求出院了。养到现在感觉已无大碍，只是不敢怎么运动了（说得自己之前多爱运动一样 ）。 一年多没体检了，所幸这次住院检查没查出什么不治之症。住院才知道钱花的快，病不起啊！所以，其实人最重要的事情是保护好身体，别生病。 保持身心健康在所有事情里面排第一位。 B3log 开源 B3log 开源的主要产品基本是每两个星期发布一个版本。虽然之前 Sym、Solo 作为业余时间的项目陆续开发好多年了，但现在感觉还是存在很大的改进空间。最近发布频繁网络上曝光比较多，用户多了起来，反馈的问题也变多了。 当然，这是一件非常好的事情，我想无论对我还是对项目而言，这都是从业余到专业的转变，继续保持下去吧 链书本来计划 4 月份上线的，现在我可以确定 4 月份是上不了了，也不打算挣扎了，5 月份见。 关于收入 托朋友的福，我和 V 接了个外包，加上卖 Sym 商业授权，这两个月的收入还算过得去，但不稳定是个大....">
+    <meta name="twitter:title" content="创业的第一个春天">
+    <meta name="twitter:image" content="https://img.hacpai.com/avatar/1353745196354_1500432853138.png?imageView2/1/w/242/h/242/interlace/0/q/100&amp;timestamp=1506571819270">
+    <meta name="twitter:url" content="https://88250.b3log.org/articles/2018/04/20/1524191993505.html">
+    <meta name="twitter:site" content="@DL88250">
+    <meta name="twitter:creator" content="@DL88250">
+    <style type="text/css" abt="234"></style><link rel="stylesheet" href="https://static-solo.b3log.org/js/lib/highlight.js-9.6.0/styles/github.css"><style type="text/css">#play_btn_up { position:fixed; right:0; bottom:53%;z-index:1001; height:36px; width:36px; cursor:pointer; background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB+SURBVDhPY1i1atV/amAGahgCMoNhaIGlS5cKAp19BoRBbLJcj2QILDJINwzoAmMgfoclIkBixkS5DI8hMJcRNgxoSBoOl6CnNZBhaVhdBjWE1MSJahjQkA4KEmYH2GUrV66cSYEhYB+AzKBtFiHkQqKiH6Ro1CDCQTWgYQQAs81DU0G/83sAAAAASUVORK5CYII=) no-repeat scroll 50% 50% rgba(0, 0, 0, 0.7); border-radius:5px 0 0 5px; margin-top:-24px; }#play_btn_dn { position:fixed; right:0; top:53%;   z-index:1001; height:36px; width:36px; cursor:pointer; background:url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVDhPY2DAAlatWvUfH8amB6vYqEGEg2pgw4iQ7cTKM6xcuXImsYpxqQOZAQ4woIIOCgzrQAl1oEFpZBiWhitFgwx7R4SBIDXYDYGZDFRgTMAwkCHGhBMRJMxwGUa8ITCbli5dKgg08AySN8+AxIhyCboiJMPIN4Qsm6miiYioxltawvSDYogohYTUAQC80UNTOht/YwAAAABJRU5ErkJggg==) no-repeat scroll 50% 50% rgba(0, 0, 0, 0.7); border-radius:5px 0 0 5px; margin-top:-24px; }.play_btn { -webkit-transition-duration:0.5s linear; -o-transition-duration:0.5s linear; -moz-transition-duration:0.5s linear; transition-duration:0.5s linear; opacity:0.65; }.play_btn:hover { opacity:1; }</style><script>//console.log('a')
+</script><script>doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                'pps_pps': {
+                    'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                    'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                },
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)){
+                    var tag = document.getElementById("playerBox").getAttribute("player")
+                    if (tag == "adt"){
+                        console.log("adt adv")
+                        return;
+                    }
+                }
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+//baidu
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style><link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css"></head>
+<body>
+<header>
+    <div class="banner">
+        <div class="fn-clear wrapper">
+            <h1 class="fn-inline">
+                <a href="https://88250.b3log.org" rel="start">
+                    丁亮的个人博客
+                </a>
+            </h1>
+            <small> &nbsp; Java/Go/Linux/开源</small>
+            <div class="fn-right">
+                <a href="/login?goto=https%3A%2F%2F88250.b3log.org%2Fadmin-index.do%23main">
+                    <i class="icon-login"></i> 登录
+                </a>
+                <a href="https://88250.b3log.org/register">
+                    <i class="icon-register"></i> 注册
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="fn-clear wrapper">
+            <nav class="fn-left">
+                <a href="https://88250.b3log.org">
+                    <i class="icon-home"></i>
+                    首页
+                </a>
+                <a href="https://88250.b3log.org/about" target="_self" rel="section">
+                    关于
+                </a>
+                <a href="https://hacpai.com" target="_blank" rel="section">
+                    黑客派
+                </a>
+                <a href="https://b3log.org" target="_blank" rel="section">
+                    B3log
+                </a>
+                <a href="https://88250.b3log.org/dynamic.html" rel="section">
+                    <i class="icon-refresh"></i> 动态
+                </a>
+                <a href="https://88250.b3log.org/tags.html" rel="section">
+                    <i class="icon-tags"></i> 标签墙
+                </a>
+                <a href="https://88250.b3log.org/archives.html">
+                    <i class="icon-inbox"></i> 存档
+                </a>
+                <a rel="archive" href="https://88250.b3log.org/links.html">
+                    <i class="icon-link"></i> 友情链接
+                </a>
+                <a rel="alternate" href="https://88250.b3log.org/blog-articles-rss.do">
+                    <i class="icon-rss"></i> RSS
+                </a>
+            </nav>
+            <div class="fn-right">
+                <form class="form" action="https://88250.b3log.org/search">
+                    <input placeholder="搜索" id="search" type="text" name="keyword">
+                    <button type="submit"><i class="icon-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="responsive fn-none">
+    <i class="icon-list"></i>
+    <ul class="list">
+        <li>
+            <a href="/login?goto=https%3A%2F%2F88250.b3log.org%2Fadmin-index.do%23main">
+                <i class="icon-login"></i> 登录
+            </a>
+        </li>
+        <li>
+            <a href="https://88250.b3log.org/register">
+                <i class="icon-register"></i> 注册
+            </a>
+        </li>
+        <li>
+            <a href="https://88250.b3log.org">
+                <i class="icon-home"></i>
+                首页
+            </a>
+        </li>
+        <li>
+            <a href="https://88250.b3log.org/about" target="_self" rel="section">
+                关于
+            </a>
+        </li>
+        <li>
+            <a href="https://hacpai.com" target="_blank" rel="section">
+                黑客派
+            </a>
+        </li>
+        <li>
+            <a href="https://b3log.org" target="_blank" rel="section">
+                B3log
+            </a>
+        </li>
+        <li>
+            <a href="https://88250.b3log.org/dynamic.html" rel="section">
+                <i class="icon-refresh"></i> 动态
+            </a>
+        </li>
+        <li>
+            <a href="https://88250.b3log.org/tags.html" rel="section">
+                <i class="icon-tags"></i> 标签墙
+            </a>
+        </li>
+        <li>
+            <a href="https://88250.b3log.org/archives.html">
+                <i class="icon-inbox"></i> 存档
+            </a>
+        </li>
+        <li>
+            <a rel="archive" href="https://88250.b3log.org/links.html">
+                <i class="icon-link"></i> 友情链接
+            </a>
+        </li>
+        <li>
+            <a rel="alternate" href="https://88250.b3log.org/blog-articles-rss.do">
+                <i class="icon-rss"></i> RSS
+            </a>
+        </li>
+    </ul>
+</div>        <div class="wrapper">
+    <div class="main-wrap">
+        <main>
+            <article class="post">
+                <header>
+                    <h1>
+                        <a rel="bookmark" href="https://88250.b3log.org/articles/2018/04/20/1524191993505.html">
+                            创业的第一个春天
+                        </a>
+                    </h1>
+                    <div class="meta">
+                                <span class="tooltipped tooltipped-n" aria-label="创建日期">
+                                    <i class="icon-date"></i>
+                                    <time>
+                                        2018-04-20
+                                    </time>
+                                </span>
+                        &nbsp; | &nbsp;
+                        <span class="tooltipped tooltipped-n" aria-label="评论数">
+                                    <i class="icon-comments"></i>
+                                    <a href="https://88250.b3log.org/articles/2018/04/20/1524191993505.html#comments">
+                                        63 评论</a>
+                                </span>
+                        &nbsp; | &nbsp;
+                        <span class="tooltipped tooltipped-n" aria-label="浏览数">
+                                    <i class="icon-views"></i>
+                                    87 浏览
+                                </span>
+                    </div>
+                </header>
+
+                <div class="content-reset">
+                    <link rel="stylesheet" type="text/css" href="https://static-solo.b3log.org/plugins/list/style.css"><p><img src="https://img.hacpai.com/bing/20180412.jpg" alt="banner"></p>
+                    <p>3 月份家里蹲之后，好几个早晨洗漱都会留鼻血，昆明的春天实在太干燥了。</p>
+                    <span id="b3_solo_h3_0"></span><h3 id="-">健康</h3>
+                    <p>3 月下旬因为气胸住院了一个星期，自我感觉良好后就要求出院了。养到现在感觉已无大碍，只是不敢怎么运动了（说得自己之前多爱运动一样 <img align="absmiddle" alt=":smirk:" class="emoji" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/smirk.png" title=":smirk:" width="20px" height="20px">）。</p>
+                    <p>一年多没体检了，所幸这次住院检查没查出什么不治之症。住院才知道钱花的快，病不起啊！所以，其实人最重要的事情是保护好身体，别生病。</p>
+                    <p>保持身心健康在所有事情里面排第一位。</p>
+                    <span id="b3_solo_h3_1"></span><h3 id="b3log-">B3log 开源</h3>
+                    <p><a href="https://b3log.org" target="_blank">B3log 开源</a>的主要产品基本是每两个星期发布一个版本。虽然之前 Sym、Solo 作为业余时间的项目陆续开发好多年了，但现在感觉还是存在很大的改进空间。最近发布频繁网络上曝光比较多，用户多了起来，反馈的问题也变多了。</p>
+                    <p>当然，这是一件非常好的事情，我想无论对我还是对项目而言，这都是从业余到专业的转变，继续保持下去吧 <img align="absmiddle" alt=":stuck_out_tongue_closed_eyes:" class="emoji" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/stuck_out_tongue_closed_eyes.png" title=":stuck_out_tongue_closed_eyes:" width="20px" height="20px"></p>
+                    <p><a href="https://github.com/b3log/chainbook" target="_blank">链书</a>本来计划 4 月份上线的，现在我可以确定 4 月份是上不了了，也不打算挣扎了，5 月份见。</p>
+                    <span id="b3_solo_h3_2"></span><h3 id="-">关于收入</h3>
+                    <p>托朋友的福，我和 V 接了个外包，加上卖 Sym 商业授权，这两个月的收入还算过得去，但不稳定是个大问题。</p>
+                    <p>好消息是 5 月份开始就可以领失业救济金了，每个月 ￥1K，能领 15 个月，感谢政府。坏消息是到目前为止身边离职创业的同事无一成功，都回归上班了。不过我几乎可以肯定的是他们上一阵子班又会继续创业的 <img align="absmiddle" alt=":joy:" class="emoji" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/joy.png" title=":joy:" width="20px" height="20px"> </p>
+                    <p>没有工资可以领后想想能养成百上千员工的老板是多么厉害，所以还在职的大家就不要冲动地炒老板鱿鱼了，升职加薪是有商量余地的。</p>
+                    <span id="b3_solo_h3_3"></span><h3 id="-">接下来</h3>
+                    <p>接下来的大致计划是：</p>
+                    <ol>
+                        <li>上线链书并进行运营，尝试往融资方向努力</li><li>想办法提升 Sym 销售量，诚招代理商</li><li>继续迭代各个产品，提升用户量</li><li><a href="https://hacpai.com/article/1516547810228" target="_blank">B3T</a> 上交易所，开始做 B3 主链</li></ol>
+                    <p>以后每个季度会分享一次阶段创业经历，无论最后结果是好是坏，我想这个过程是有价值的，希望能对大家有借鉴意义也希望得到大家的指点和帮助，我们一起加油！</p>
+                    <div>
+                        <font color="green"><b>---- EOF ----</b></font>
+                        <br>
+                        <div>
+                            点击加入开源技术 Q 群 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=56bc192858f5fabdec9fb564b22552c121b58860179f61a89d2a44e22a906640">242561391</a>，让学习和分享成为一种习惯！
+                        </div>
+                        <br>
+                        <!--
+                        <div>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:728px;height:90px"
+                             data-ad-client="ca-pub-5357405790190342"
+                             data-ad-slot="0163868570"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        </div>
+                        -->
+                    </div>
+                </div>
+
+                <footer class="tags">
+                    <a class="tag" rel="tag" href="https://88250.b3log.org/tags/%E5%88%9B%E4%B8%9A">
+                        创业</a>
+                    <a class="tag" rel="tag" href="https://88250.b3log.org/tags/%E5%88%86%E4%BA%AB">
+                        分享</a>
+                    <a class="tag" rel="tag" href="https://88250.b3log.org/tags/%E9%93%BE%E4%B9%A6">
+                        链书</a>
+
+
+                    <div class="rel fn-clear">
+                        <a href="https://88250.b3log.org/articles/2018/03/15/1521094110639.html" rel="prev" class="fn-left tooltipped tooltipped-n" aria-label="MySQL 迁移 utf8 到 utf8mb4">
+                            旧一篇
+                        </a>
+                    </div>
+                </footer>
+                <header class="title"><h2>评论</h2></header>
+                <ul class="comments" id="comments">
+                    <li id="1524720703466">
+                        <div>
+                            <div class="avatar tooltipped tooltipped-n" aria-label="footmanff" style="background-image: url(https://img.hacpai.com/avatar/1515650940441_1524533841684.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                            <main>
+                                <div class="fn-clear">
+                                    <a class="user-name" href="https://hacpai.com/member/footmanff" target="_blank">footmanff</a>
+                                    <time class="ft-gray">2018-04-26 13:31</time>
+
+                                    <a class="reply-btn" href="javascript:replyTo('1524720703466')">回复»</a>
+                                </div>
+                                <div class="content-reset">
+                                    <p>支持啊，勇敢的创业者 </p>
+                                </div>
+                            </main>
+                        </div>
+                    </li><li id="1524642914215">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="ob" style="background-image: url(https://img.hacpai.com/avatar/1489421302603_1489421389812.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/ob" target="_blank">ob</a>
+                                <time class="ft-gray">2018-04-25 15:55</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524642914215')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>默默支持，就冲D大魅力，风投闭着上梭啊。</p>
+                                <p>最近腰也隐隐作痛，身体要紧 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524640499696">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="lwl" style="background-image: url(https://img.hacpai.com/avatar/1505456507935_1508421323321.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/lwl" target="_blank">lwl</a>
+                                <time class="ft-gray">2018-04-25 15:15</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524640499696')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>其实我是这么想的，本来很早加入了github上的组织想着能出一份力，可是直接去看，无从下手，也帮不上忙，加入d大把这些任务拆分开，如果有什么东西要改，要做，分配给组织里愿意出力的人来做，然后自己专心做核心东西。 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524638008140">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="xiongwilee" style="background-image: url(https://img.hacpai.com/avatar/1516875771003_1516876068523.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/xiongwilee" target="_blank">xiongwilee</a>
+                                <time class="ft-gray">2018-04-25 14:33</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524638008140')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>有个想法: D大的项目挺多，有没有可能的砍掉没有前景的业务，把目标集中在一个项目，专注发力呢？ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524636865126">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="xiongwilee" style="background-image: url(https://img.hacpai.com/avatar/1516875771003_1516876068523.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/xiongwilee" target="_blank">xiongwilee</a>
+                                <time class="ft-gray">2018-04-25 14:14</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524636865126')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524626798012">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Zane" style="background-image: url(https://img.hacpai.com/avatar/1355811622265?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Zane" target="_blank">Zane</a>
+                                <time class="ft-gray">2018-04-25 11:26</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524626798012')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>钢扒嘚~ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524563185662">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="suyuanhxx" style="background-image: url(https://img.hacpai.com/avatar/1459420209493_1484217348254.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/suyuanhxx" target="_blank">suyuanhxx</a>
+                                <time class="ft-gray">2018-04-24 17:46</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524563185662')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>关注好多几年了，博主还是很厉害的，加油 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524560297136">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="notenough" style="background-image: url(https://img.hacpai.com/avatar/1524559603366?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/notenough" target="_blank">notenough</a>
+                                <time class="ft-gray">2018-04-24 16:58</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524560297136')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油！！！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524538300125">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="lwl" style="background-image: url(https://img.hacpai.com/avatar/1505456507935_1508421323321.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/lwl" target="_blank">lwl</a>
+                                <time class="ft-gray">2018-04-24 10:51</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524538300125')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>我也想问。自己辞职没工作可以领吗？ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524536229224">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="xuedon1121" style="background-image: url(https://img.hacpai.com/avatar/1524535458821_1524535543186.jpg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/xuedon1121" target="_blank">xuedon1121</a>
+                                <time class="ft-gray">2018-04-24 10:17</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524536229224')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>请教怎么领取失业救济金 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524534136116">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="xxx" style="background-image: url(https://secure.gravatar.com/avatar/e88e3798726840315e3dfae0bc146467?s=128)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                xxx
+                                <time class="ft-gray">2018-04-24 09:42</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524534136116')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p><img align="absmiddle" alt=":smile:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/smile.png" title=":smile:" width="20px" height="20px"></p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524466490299">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="undefinedUser" style="background-image: url(https://img.hacpai.com/avatar/1487061959395_1487062093229.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/undefinedUser" target="_blank">undefinedUser</a>
+                                <time class="ft-gray">2018-04-23 14:54</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524466490299')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>感觉D大人太温和，做产品嘛，性格中带点进攻型更好哎。 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524465343334">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="liwen930723" style="background-image: url(https://img.hacpai.com/avatar/1524465123503?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/liwen930723" target="_blank">liwen930723</a>
+                                <time class="ft-gray">2018-04-23 14:35</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524465343334')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>怎么领失业救济金呢... 我也想领,,我也是创业中 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524448948348">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="cmlanche" style="background-image: url(https://img.hacpai.com/avatar/1404008969220_1479096553064.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/cmlanche" target="_blank">cmlanche</a>
+                                <time class="ft-gray">2018-04-23 10:02</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524448948348')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油！支持! </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524448890471">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="trc" style="background-image: url(https://img.hacpai.com/avatar/1524448782398?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/trc" target="_blank">trc</a>
+                                <time class="ft-gray">2018-04-23 10:01</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524448890471')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>昆明的程序员，唤起了我久远的记忆 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524407231523">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="ly554369080" style="background-image: url(https://img.hacpai.com/avatar/1483077913509_1483077956283.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/ly554369080" target="_blank">ly554369080</a>
+                                <time class="ft-gray">2018-04-22 22:27</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524407231523')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>支持D大 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524395467988">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="dexter" style="background-image: url(https://img.hacpai.com/avatar/1519134315251?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/dexter" target="_blank">dexter</a>
+                                <time class="ft-gray">2018-04-22 19:11</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524395467988')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>怎么领失业救济金呢...我也想领...<img align="absmiddle" alt=":joy:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/joy.png" title=":joy:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524393875180">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="crick77" style="background-image: url(https://img.hacpai.com/avatar/1369914649233_1498353453085.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/crick77" target="_blank">crick77</a>
+                                <time class="ft-gray">2018-04-22 18:44</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524393875180')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p></p>
+                                <blockquote>
+                                    <p>Before Pied Piper envisioned a new internet, it was a simple app to detect infringement of music copyrights – a side project of lowly Hooli employee Richard Hendricks. But buried within this consumer-facing service was something much more valuable: a world-beating compression algorithm.<br>Once others caught wind of the promise of his algorithm, Richard found himself in the middle of a bidding war between two of the Valley’s major players. Hooli CEO Gavin Belson pounced with a ten million dollar acquisition offer, while VC Peter Gregory offered a $200,000 seed round to start a new company. The stress of the decision took a physical toll on Richard, but in the end he picked Gregory and the power to see his tech through to its fullest potential.<br>With the backing of Gregory’s fund Raviga, Hendricks assembled his team: Dinesh Chugtai, Bertram Gilfoyle, and Jared Dunn, all working together out of Erlich Bachman’s incubator. The company’s first great test came at TechCrunch Disrupt. After a challenge from Hooli’s compression competitor Nucleus, Richard pulled an all-nighter to invent a new approach to compression: middle-out. In the finals of the competition, Richard’s middle-out algorithm surpassed the theoretical limit and achieved the highest Weissman score ever recorded. Pied Piper took first place at Disrupt.<br><a href="http://www.piedpiper.com">http://www.piedpiper.com</a></p>
+                                </blockquote>
+                                <p>感觉 链书 在美剧《硅谷》中实现了。。。 </p>
+                                <p></p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524388078882">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="tmedivh" style="background-image: url(https://img.hacpai.com/avatar/1472632157362_1472707826578.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/tmedivh" target="_blank">tmedivh</a>
+                                <time class="ft-gray">2018-04-22 17:08</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524388078882')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>厉害了 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524301903185">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Hassan" style="background-image: url(https://img.hacpai.com/avatar/1387852130634_1482923250902.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Hassan" target="_blank">Hassan</a>
+                                <time class="ft-gray">2018-04-21 17:11</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524301903185')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油！！！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524284122990">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="hacpai1174" style="background-image: url(https://img.hacpai.com/avatar/1520328470709?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/hacpai1174" target="_blank">hacpai1174</a>
+                                <time class="ft-gray">2018-04-21 12:15</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524284122990')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>默默支持 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524269164421">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="DrJoseph" style="background-image: url(https://img.hacpai.com/avatar/1498545189089_1498545428562.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/DrJoseph" target="_blank">DrJoseph</a>
+                                <time class="ft-gray">2018-04-21 08:06</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524269164421')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>支持D大，身体是革命的本钱，保重身体 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524217572584">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="duckgo" style="background-image: url(https://img.hacpai.com/avatar/1488183272555_1492312332387.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/duckgo" target="_blank">duckgo</a>
+                                <time class="ft-gray">2018-04-20 17:46</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524217572584')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>为什么不基于spring一些既有组件实现？有何考虑？ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524215280284">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="smart" style="background-image: url(https://img.hacpai.com/avatar/1476867496546_1519817142712.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/smart" target="_blank">smart</a>
+                                <time class="ft-gray">2018-04-20 17:08</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524215280284')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>借楼说话，Footer里B3log的Github链接怎么没了？我记得之前有的啊？<br>@88250 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524213935244">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="darknesschaser" style="background-image: url(https://img.hacpai.com/avatar/1517408321168_1522644265424.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/darknesschaser" target="_blank">darknesschaser</a>
+                                <time class="ft-gray">2018-04-20 16:45</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524213935244')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>创业是很难的，无论什么问题X10就很不一样了…… </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524213746661">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="wangtianxin" style="background-image: url(https://img.hacpai.com/avatar/1484877553215_1505471923056.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/wangtianxin" target="_blank">wangtianxin</a>
+                                <time class="ft-gray">2018-04-20 16:42</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524213746661')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>老黑都创业了。各位还有不努力的理由吗。祝愿老黑创业成功！到时候给我一个端菜倒水的职位即可。<img align="absmiddle" alt=":smile:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/smile.png" title=":smile:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524213134264">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="wenandlu" style="background-image: url(https://img.hacpai.com/avatar/1499137655282_1503026310470.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/wenandlu" target="_blank">wenandlu</a>
+                                <time class="ft-gray">2018-04-20 16:32</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524213134264')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>D加油，需要帮助尽管说，尽力！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524210911610">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="errorlife" style="background-image: url(https://img.hacpai.com/avatar/1482112230187_1489578752743.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/errorlife" target="_blank">errorlife</a>
+                                <time class="ft-gray">2018-04-20 15:55</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524210911610')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>D大注意身体，加油 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524210351301">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="ibut" style="background-image: url(https://img.hacpai.com/avatar/1487667104882_1487667189622.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/ibut" target="_blank">ibut</a>
+                                <time class="ft-gray">2018-04-20 15:45</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524210351301')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p><img align="absmiddle" alt=":trollface:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/trollface.png" title=":trollface:" width="20px" height="20px"> 棒棒哒 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524208517494">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Today" style="background-image: url(https://img.hacpai.com/avatar/1519777537186_1519778411018.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Today" target="_blank">Today</a>
+                                <time class="ft-gray">2018-04-20 15:15</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524208517494')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油哦 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524206892700">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="xjtushilei" style="background-image: url(https://img.hacpai.com/avatar/1484222007591_1484222297097.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/xjtushilei" target="_blank">xjtushilei</a>
+                                <time class="ft-gray">2018-04-20 14:48</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524206892700')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>DV 看好你们~！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524206802336">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="CaptainTack" style="background-image: url(https://img.hacpai.com/avatar/1524206562700?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/CaptainTack" target="_blank">CaptainTack</a>
+                                <time class="ft-gray">2018-04-20 14:46</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524206802336')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油~<img align="absmiddle" alt=":+1:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/+1.png" title=":+1:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524206542144">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="mrj128" style="background-image: url(https://img.hacpai.com/avatar/1473589188564_1473589734878.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/mrj128" target="_blank">mrj128</a>
+                                <time class="ft-gray">2018-04-20 14:42</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524206542144')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524203812939">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Zephyr" style="background-image: url(https://img.hacpai.com/avatar/1465873147243_1507628248381.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Zephyr" target="_blank">Zephyr</a>
+                                <time class="ft-gray">2018-04-20 13:56</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524203812939')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>D大V5，健康最重要 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524203751357">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="cnjianghu" style="background-image: url(https://img.hacpai.com/avatar/1521694217824?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/cnjianghu" target="_blank">cnjianghu</a>
+                                <time class="ft-gray">2018-04-20 13:55</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524203751357')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524202306135">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Joan" style="background-image: url(https://img.hacpai.com/avatar/1524033213145?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Joan" target="_blank">Joan</a>
+                                <time class="ft-gray">2018-04-20 13:31</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524202306135')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524199188334">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="smokebox" style="background-image: url(https://img.hacpai.com/avatar/1521161275520?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/smokebox" target="_blank">smokebox</a>
+                                <time class="ft-gray">2018-04-20 12:39</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524199188334')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>健康和为用户创造价值都试过不可缺的，加油！榜样！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524197322045">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="lwl" style="background-image: url(https://img.hacpai.com/avatar/1505456507935_1508421323321.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/lwl" target="_blank">lwl</a>
+                                <time class="ft-gray">2018-04-20 12:08</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524197322045')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524196516819">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="ldan2012" style="background-image: url(https://img.hacpai.com/avatar/1485047989130_1516669877633.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/ldan2012" target="_blank">ldan2012</a>
+                                <time class="ft-gray">2018-04-20 11:55</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524196516819')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p><img src="https://img.hacpai.com/file/2018/04/d242e5feae344aba8a6b066426932647_image.png" alt="imagepng"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524195805570">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="yangyujiao" style="background-image: url(https://img.hacpai.com/avatar/1429237272905_1483064274321.undefined?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/yangyujiao" target="_blank">yangyujiao</a>
+                                <time class="ft-gray">2018-04-20 11:43</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524195805570')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>我经常祝福人的一句话是：健康平安。</p>
+                                <p>我觉得很多东西可以通过努力获取，但是这两点努力基本是不够的。<br>就像天灾一样，不可预知。</p>
+                                <p>在努力赚钱的同时，一定要好好保重自己的身体。<br>另外，我觉得上天不会对努力的人太苛刻，D&amp;V如此努力，一定可以获得该有的成功，加油加油。</p>
+                                <p>如果你觉得有什么事情可以帮到你的，请尽管开口。 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524195544525">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Nick" style="background-image: url(https://img.hacpai.com/avatar/1461291847075_1521436212418.JPG?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Nick" target="_blank">Nick</a>
+                                <time class="ft-gray">2018-04-20 11:39</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524195544525')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>2018年春节跟老家表兄弟们一起时跟我说要一起搞点什么创业;<br>碰到以前的同事吃饭的时候也说要找点什么项目一起创业；<br>朋友之间也拉的有QQ群，时不时也在里面说要创业不然没前途。<br>前年开始也想着创业，还特意陆续注册了两个十年的域名，不过看了很多创业的帖子和分享，感觉自己做人和做事还是不太靠谱，得谨慎。<br>这几年感觉除了房价蹭蹭得往上涨，即使我都能感觉到大环境不是太好，也没见大家创业的热情消退，只是观望的多，实际去实现的少。<br>最近老家定了套房子，过段时间就要开始还房贷了，然后内心创业的火苗反而黯淡了许多，也能体会那些求稳的同事心态了。<br>感觉现在创业的环境反而不及前几年了，我能想到的东西网上都能搜得到，加上监管的问题，实在是没太大信心。<br>所以跟楼主一样，还是挺佩服那些能把企业做起来还能养一帮人的老板们...<br>再者过了一定年纪，任自己还有多大的激情，但是确确实实已经明显感觉身体机能已经开始走下坡路了，时不时已经开始跟我室友讨论养生的话题了... </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524195074498">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="haha" style="background-image: url(https://img.hacpai.com/avatar/1516774620693_1516775034910.jpg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/haha" target="_blank">haha</a>
+                                <time class="ft-gray">2018-04-20 11:31</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524195074498')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>可以投资一波b3t吗 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524194786465">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="JavaHope" style="background-image: url(https://img.hacpai.com/avatar/1471010884330_1524035773577.JPG?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/JavaHope" target="_blank">JavaHope</a>
+                                <time class="ft-gray">2018-04-20 11:26</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524194786465')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油！我们支持你！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193913707">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="zxh008" style="background-image: url(https://img.hacpai.com/avatar/1521076470631_1521196063672.gif?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/zxh008" target="_blank">zxh008</a>
+                                <time class="ft-gray">2018-04-20 11:11</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193913707')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>运动和瘦都会引发气胸，我高中的时候也得过，而且还做了手术。所以，多吃饭多喝水运动还是要有的，D大加油~<img align="absmiddle" alt=":yum:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/yum.png" title=":yum:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193866072">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="kuailexs" style="background-image: url(https://img.hacpai.com/avatar/1472016410060_1506678218379.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/kuailexs" target="_blank">kuailexs</a>
+                                <time class="ft-gray">2018-04-20 11:11</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193866072')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>保重身体,加油 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193841126">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="mainlove" style="background-image: url(https://img.hacpai.com/avatar/1354772746034_1509598791574.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/mainlove" target="_blank">mainlove</a>
+                                <time class="ft-gray">2018-04-20 11:10</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193841126')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>你这样怎么爬雪山呢。。。</p>
+                                <p>不过钱赚多看 可以叫人抬上去，还是赚钱吧 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193817355">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="clenji" style="background-image: url(https://img.hacpai.com/avatar/1522241712435_1522241813426.jpg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/clenji" target="_blank">clenji</a>
+                                <time class="ft-gray">2018-04-20 11:10</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193817355')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油，支持开源程序员 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193752352">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="SimpleBin" style="background-image: url(https://img.hacpai.com/avatar/1467810638025_1492769409964.gif?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/SimpleBin" target="_blank">SimpleBin</a>
+                                <time class="ft-gray">2018-04-20 11:09</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193752352')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油~~ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193633196">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="277367546" style="background-image: url(https://img.hacpai.com/avatar/1482304984436_1482905798721.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/277367546" target="_blank">277367546</a>
+                                <time class="ft-gray">2018-04-20 11:07</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193633196')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>@88250 加油！我们支持你！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193612014">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="fei123" style="background-image: url(https://img.hacpai.com/avatar/1502275786622_1516612497488.jpg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/fei123" target="_blank">fei123</a>
+                                <time class="ft-gray">2018-04-20 11:06</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193612014')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油，我们会支持你的。工作的事情虽然也很重要，但是你也要保重身体，毕竟身体是革的本钱。加油！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193606208">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="ronger" style="background-image: url(https://img.hacpai.com/avatar/1493188821283_1521007630520.jpg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/ronger" target="_blank">ronger</a>
+                                <time class="ft-gray">2018-04-20 11:06</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193606208')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>保重身体 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193605412">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Kinpo" style="background-image: url(https://img.hacpai.com/avatar/1481028796895_1495550432302.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Kinpo" target="_blank">Kinpo</a>
+                                <time class="ft-gray">2018-04-20 11:06</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193605412')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193582431">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="mitewater" style="background-image: url(https://img.hacpai.com/avatar/1483943075230_1483943159766.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/mitewater" target="_blank">mitewater</a>
+                                <time class="ft-gray">2018-04-20 11:06</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193582431')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>感觉D大的身体扛不住<img align="absmiddle" alt=":dog:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/dog.png" title=":dog:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193481949">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="yeburenci" style="background-image: url(https://img.hacpai.com/avatar/1514273171104_1516275537506.png?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/yeburenci" target="_blank">yeburenci</a>
+                                <time class="ft-gray">2018-04-20 11:04</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193481949')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>支持，我想给你打工了<img align="absmiddle" alt=":smile:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/smile.png" title=":smile:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193451255">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="kafuly" style="background-image: url(https://img.hacpai.com/avatar/1507862395811_1519524078673.jpg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/kafuly" target="_blank">kafuly</a>
+                                <time class="ft-gray">2018-04-20 11:04</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193451255')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>for the main chain </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193424284">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="alanfans" style="background-image: url(https://img.hacpai.com/avatar/1472916487771_1476781787075.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/alanfans" target="_blank">alanfans</a>
+                                <time class="ft-gray">2018-04-20 11:03</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193424284')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>健康是第一位，不要熬夜！！！！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193398222">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Green" style="background-image: url(https://img.hacpai.com/avatar/1437531695940_1490604270656.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Green" target="_blank">Green</a>
+                                <time class="ft-gray">2018-04-20 11:03</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193398222')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>持续关注~ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193390950">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="Rogerjie" style="background-image: url(https://img.hacpai.com/avatar/1521616616510?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/Rogerjie" target="_blank">Rogerjie</a>
+                                <time class="ft-gray">2018-04-20 11:03</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193390950')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油吧 创业路艰辛啊<img align="absmiddle" alt=":joy:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/joy.png" title=":joy:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193377927">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="hzmu" style="background-image: url(https://img.hacpai.com/avatar/1464923994467_1474346399586.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/hzmu" target="_blank">hzmu</a>
+                                <time class="ft-gray">2018-04-20 11:02</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193377927')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油~!! </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193356906">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="xiaoyuan" style="background-image: url(https://img.hacpai.com/avatar/1523296013506?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/xiaoyuan" target="_blank">xiaoyuan</a>
+                                <time class="ft-gray">2018-04-20 11:02</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193356906')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>加油 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193294739">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="An" style="background-image: url(https://img.hacpai.com/avatar/1353745455054_1482814208900.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/An" target="_blank">An</a>
+                                <time class="ft-gray">2018-04-20 11:01</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193294739')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>大d，身体才是革命的本钱 </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524193210994">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="VicYu" style="background-image: url(https://img.hacpai.com/avatar/1460344820733_1486707544582.jpeg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/VicYu" target="_blank">VicYu</a>
+                                <time class="ft-gray">2018-04-20 11:00</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524193210994')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>忆往昔，开源节流，保持散步，祝好！ </p>
+                            </div>
+                        </main>
+                    </div>
+                </li><li id="1524192771412">
+                    <div>
+                        <div class="avatar tooltipped tooltipped-n" aria-label="lifan188" style="background-image: url(https://img.hacpai.com/avatar/1506579048824_1521120733821.jpg?imageView2/1/w/80/h/80/interlace/0/q/100)"></div>
+                        <main>
+                            <div class="fn-clear">
+                                <a class="user-name" href="https://hacpai.com/member/lifan188" target="_blank">lifan188</a>
+                                <time class="ft-gray">2018-04-20 10:52</time>
+
+                                <a class="reply-btn" href="javascript:replyTo('1524192771412')">回复»</a>
+                            </div>
+                            <div class="content-reset">
+                                <p>@88250 加油，我们也会支持你的。多注意身体。<img align="absmiddle" alt=":smile:" src="https://static-solo.b3log.org/js/lib/emojify.js-1.1.0/images/basic/smile.png" title=":smile:" width="20px" height="20px"> </p>
+                            </div>
+                        </main>
+                    </div>
+                </li></ul>
+                <header class="title"><h2>发表评论</h2></header>
+                <table id="commentForm" class="form">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input placeholder="姓名" type="text" class="normalInput" id="commentName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input placeholder="邮箱" type="email" class="normalInput" id="commentEmail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input placeholder="URL" type="url" id="commentURL">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="emotions" class="emotions">
+                            <span class="em00" title=":smile:"></span>
+                            <span class="em01" title=":joy:"></span>
+                            <span class="em02" title=":stuck_out_tongue_winking_eye:"></span>
+                            <span class="em03" title=":persevere:"></span>
+                            <span class="em04" title=":sob:"></span>
+                            <span class="em05" title=":cold_sweat:"></span>
+                            <span class="em06" title=":rage:"></span>
+                            <span class="em07" title=":triumph:"></span>
+                            <span class="em08" title=":eyes:"></span>
+                            <span class="em09" title=":scream:"></span>
+                            <span class="em10" title=":sunglasses:"></span>
+                            <span class="em11" title=":yum:"></span>
+                            <span class="em12" title=":heart:"></span>
+                            <span class="em13" title=":broken_heart:"></span>
+                            <span class="em14" title=":smiling_imp:"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea rows="5" cols="96" id="comment"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input style="width:50%" placeholder="验证码" type="text" class="normalInput" id="commentValidate">
+                            <img class="captcha" id="captcha" alt="validate" src="https://88250.b3log.org/captcha.do">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <span class="error-msg" id="commentErrorTip"></span>
+                            <button id="submitCommentButton" onclick="page.submitComment();">提交评论</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div id="externalRelevantArticles" class="list"><header class="title"><h2>站外相关阅读</h2></header><ul class="marginLeft12"><li><a rel="nofollow" title="上帝一看到IT人要创业就笑了." target="_blank" href="http://www.qmgps.cn:8080/articles/2018/02/26/1519622316806.html">上帝一看到IT人要创业就笑了.</a></li><li><a rel="nofollow" title="关于引领新的产业" target="_blank" href="http://kursh.top/articles/2017/08/05/1501905283585.html">关于引领新的产业</a></li><li><a rel="nofollow" title="十二星座的省钱之道，哪个更不折不扣？" target="_blank" href="http://pipe.b3log.org/blogs/Ethan/articles/ethan/01">十二星座的省钱之道，哪个更不折不扣？</a></li><li><a rel="nofollow" title="go语言学习（一）：mac 下 go开发环境搭建" target="_blank" href="http://gitor.org/articles/2017/12/29/1514548233882.html">go语言学习（一）：mac 下 go开发环境搭建</a></li><li><a rel="nofollow" title="Dism++，最强的Windows实用工具，PE必备工具" target="_blank" href="http://www.myylm.com/mdism">Dism++，最强的Windows实用工具，PE必备工具</a></li><li><a rel="nofollow" title="[转载]白话算法(0) 一个不太正经的系列的不太正经的序言" target="_blank" href="http://blog.singu.top/articles/2017/11/24/1511494148314.html">[转载]白话算法(0) 一个不太正经的系列的不太正经的序言</a></li><li><a rel="nofollow" title="[转载] 如何看待开源 (An Open Source perspective for the youngsters)" target="_blank" href="http://blog.singu.top/articles/2017/10/20/1508474088876.html">[转载] 如何看待开源 (An Open Source perspective for the youngsters)</a></li></ul></div>
+
+                <div id="randomArticles" class="list"><h4>随机阅读：</h4><ul class="marginLeft12"><li><a rel="nofollow" title="今天正式搬家过来CSDN了~~~~" href="https://88250.b3log.org/articles/2006/12/02/1165070220000.html">今天正式搬家过来CSDN了~~~~</a></li><li><a rel="nofollow" title="QQ木马的简单实现，QQ盗号核心编程。。。。" href="https://88250.b3log.org/articles/2006/12/02/1165071600000.html">QQ木马的简单实现，QQ盗号核心编程。。。。</a></li><li><a rel="nofollow" title="#pragma   指示符的用法" href="https://88250.b3log.org/articles/2006/12/02/1165072140000.html">#pragma   指示符的用法</a></li><li><a rel="nofollow" title="华为面试题。。。。" href="https://88250.b3log.org/articles/2006/12/02/1165072980000.html">华为面试题。。。。</a></li><li><a rel="nofollow" title="最小生成树Kruskal" href="https://88250.b3log.org/articles/2006/12/02/1165099260000.html">最小生成树Kruskal</a></li></ul></div>
+            </article>
+        </main>
+        <aside class="has-toc"><ul class="fn-clear"><li class="current" data-tab="toc">文章目录</li><li data-tab="site" class="">站点概要</li></ul><section style="height: 676px; overflow: auto; width: 311px; opacity: 1; top: 0px; display: block;"><ul class="b3-solo-list"><li class="b3-solo-list-h3"><a href="#b3_solo_h3_0">健康</a></li><li class="b3-solo-list-h3"><a href="#b3_solo_h3_1">B3log 开源</a></li><li class="b3-solo-list-h3"><a href="#b3_solo_h3_2">关于收入</a></li><li class="b3-solo-list-h3"><a href="#b3_solo_h3_3">接下来</a></li></ul></section>
+            <section style="display: block; opacity: 0; top: -50px;">
+                <div class="ad content-reset">
+                    <div>
+                        GitHub 上 Star 数最多的 Java 博客 <a style="text-decoration: none;" target="_blank" href="https://github.com/b3log/solo"><span style="color: orangered; font-weight: bold;">Solo</span></a><br>
+                        Golang 黑科技之在线 IDE <a style="text-decoration: none;" target="_blank" href="https://wide.b3log.org"><span style="color: #4183c4; font-weight:
+bold;">Wide</span></a><br>
+                        黑客与画家的社区 <a style="text-decoration: none;" target="_blank" href="https://hacpai.com/register?r=88250"><span style="color: #f47e00; font-weight:
+bold;">Sym</span></a>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <header><h2>分类</h2></header>
+                    <main>
+                        <a href="https://88250.b3log.org/category/dev-language" aria-label="36 个标签" class="tag tooltipped tooltipped-n">
+                            编程语言</a>
+                        <a href="https://88250.b3log.org/category/past-summary" aria-label="3 个标签" class="tag tooltipped tooltipped-n">
+                            往事与总结</a>
+                        <a href="https://88250.b3log.org/category/i-love-opensource" aria-label="29 个标签" class="tag tooltipped tooltipped-n">
+                            开源项目</a>
+                        <a href="https://88250.b3log.org/category/linux" aria-label="9 个标签" class="tag tooltipped tooltipped-n">
+                            Linux</a>
+                        <a href="https://88250.b3log.org/category/arch" aria-label="2 个标签" class="tag tooltipped tooltipped-n">
+                            架构设计</a>
+                        <a href="https://88250.b3log.org/category/数据库" aria-label="4 个标签" class="tag tooltipped tooltipped-n">
+                            数据库</a>
+                    </main>
+                </div>
+
+                <div class="module">
+                    <header><h2>标签</h2></header>
+                    <main>
+                        <a rel="tag" href="https://88250.b3log.org/tags/B3log" class="tag tooltipped tooltipped-n" aria-label="66 篇文章">
+                            B3log</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/C%2FC%2B%2B" class="tag tooltipped tooltipped-n" aria-label="57 篇文章">
+                            C/C++</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/Fiddlededee" class="tag tooltipped tooltipped-n" aria-label="88 篇文章">
+                            Fiddlededee</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/GAE" class="tag tooltipped tooltipped-n" aria-label="57 篇文章">
+                            GAE</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/J2EE%2FJavaEE" class="tag tooltipped tooltipped-n" aria-label="138 篇文章">
+                            J2EE/JavaEE</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/J2SE%2FJavaSE" class="tag tooltipped tooltipped-n" aria-label="169 篇文章">
+                            J2SE/JavaSE</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/Java" class="tag tooltipped tooltipped-n" aria-label="193 篇文章">
+                            Java</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/JavaFX" class="tag tooltipped tooltipped-n" aria-label="69 篇文章">
+                            JavaFX</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/Java%20Server%20Faces" class="tag tooltipped tooltipped-n" aria-label="46 篇文章">
+                            Java Server Faces</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/Life%20in%20Programming" class="tag tooltipped tooltipped-n" aria-label="200 篇文章">
+                            Life in Programming</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/My%20Linux" class="tag tooltipped tooltipped-n" aria-label="168 篇文章">
+                            My Linux</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/NetBeans" class="tag tooltipped tooltipped-n" aria-label="354 篇文章">
+                            NetBeans</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/Network%20Engineering" class="tag tooltipped tooltipped-n" aria-label="64 篇文章">
+                            Network Engineering</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/Open%20Source" class="tag tooltipped tooltipped-n" aria-label="390 篇文章">
+                            Open Source</a>
+                        <a rel="tag" href="https://88250.b3log.org/tags/PHP" class="tag tooltipped tooltipped-n" aria-label="51 篇文章">
+                            PHP</a>
+                    </main>
+                </div>
+
+                <div class="module meta">
+                    <header>
+                        <h2>88250</h2>
+                    </header>
+                    <main class="fn-clear">
+                        <img src="https://img.hacpai.com/avatar/1353745196354_1500432853138.png?imageView2/1/w/242/h/242/interlace/0/q/100&amp;timestamp=1506571819270" aria-label="88250">
+                        <div class="fn-right">
+                            <a href="https://88250.b3log.org/archives.html">
+                                1840
+                                <span class="ft-gray">文章</span></a><br>
+                            <a href="https://88250.b3log.org/dynamic.html">
+                                2065
+                                <span class="ft-gray">评论</span></a><br>
+                            2785728 <span class="ft-gray">浏览</span><br>
+                            13 <span class="ft-gray">访客</span>
+                        </div>
+                    </main>
+                </div>
+
+                <div class="module">
+                    <header><h2>评论最多的文章</h2></header>
+                    <main class="list">
+                        <ul>
+                            <li>
+                                <a rel="nofollow" aria-label="88 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2013/02/08/1360294444788.html">
+                                    Sym 社区介绍
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="76 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2017/04/23/1492881378588.html">
+                                    Solo 用户指南
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="63 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2018/04/20/1524191993505.html">
+                                    创业的第一个春天
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="52 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2017/12/31/1514687638181.html">
+                                    2017 成为报废程序员的前一年
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="52 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2017/09/11/1505113028471.html">
+                                    Solo 的 golang 版计划
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="38 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2015/12/19/1450507069972.html">
+                                    Java 开源博客 Solo 1.3.0 发布 - Docker 支持
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="33 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2017/01/01/1483240295087.html">
+                                    疯狂的想法 C：书籍共享计划
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="32 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2017/01/23/1485143241940.html">
+                                    Java 开源博客 Solo 1.8.0 发布 - 改进文件上传
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="31 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2016/01/30/1454085278317.html">
+                                    2015 年总结 - 十年
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="30 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2017/04/14/1492099966859.html">
+                                    Java 开源博客 Solo 2.0.0 发布 - 聚合分类
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="29 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2016/02/05/1454642390522.html">
+                                    基于 Web 的 Go 语言 IDE - Wide 1.5.0 发布！
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="28 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2016/09/09/1473387238770.html">
+                                    Java 开源博客 Solo 1.6.0 发布 - 新后台
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="27 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/b3log-solo-release-045-final.html">
+                                    Java 开源博客——B3log Solo 0.4.5 正式版发布了！
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="27 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/everbox-invite.html">
+                                    EverBox（同步网盘）邀请
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="26 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2016/12/30/1483027205828.html">
+                                    2016 一个想做架构师的码农
+                                </a>
+                            </li>
+                        </ul>
+                    </main>
+                </div>
+
+                <div class="module">
+                    <header><h2>访问最多的文章</h2></header>
+                    <main class="list">
+                        <ul>
+                            <li>
+                                <a rel="nofollow" aria-label="16 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/full-text-search-elasticsearch">
+                                    全文搜索之 Elasticsearch
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="8 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/write-doc-via-gitbook">
+                                    使用 GitBook 写文档
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="12 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/b3log-solo-release-040-final.html">
+                                    GAE 博客——B3log Solo 0.4.0 正式版发布了！
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="13 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/rabbitmq-clustering-ha">
+                                    RabbitMQ 集群与高可用配置
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="6 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/web-message-push">
+                                    消息推送技术
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="24 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/apply-b3log-domain.html">
+                                    快来申请 b3log.org 二级域名吧！
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="24 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/gae-quota-optimization">
+                                    GAE 配额优化
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="18 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/gae-blog.html">
+                                    GAE 博客程序推荐
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="8 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/bae-sae-gae">
+                                    BAE、SAE 与 GAE 对比
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="4 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/backup-mysql-shell">
+                                    MySQL 自动备份 Shell 脚本
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="27 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/b3log-solo-release-045-final.html">
+                                    Java 开源博客——B3log Solo 0.4.5 正式版发布了！
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="13 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/programming-life-2011.html">
+                                    2011 年个人回忆与总结
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="23 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/articles/2011/05/03/1304392185486.html">
+                                    准备入职支付宝
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="21 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/b3log-solo-release-046-final.html">
+                                    Java 开源博客——B3log Solo 0.4.6 正式版发布了！
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" aria-label="17 评论" class="tooltipped tooltipped-e" href="https://88250.b3log.org/java-atomic-conncurrent">
+                                    Java 原子操作与并发
+                                </a>
+                            </li>
+                        </ul>
+                    </main>
+                </div>
+            </section>
+        </aside>            </div>
+</div>
+<footer class="footer fn-clear">
+    © 2018
+
+    <a href="https://88250.b3log.org">丁亮的个人博客</a>  &nbsp;   • &nbsp;
+    <a href="https://solo.b3log.org" target="_blank">Solo</a> 2.8.0  <br>
+
+    Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源 &nbsp;
+    <span class="ft-warn">♥</span>
+    Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">9IPHP</a> by <a href="https://github.com/9IPHP/9IPHP" target="_blank">9IPHP</a> &amp; <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
+</footer>
+<div class="icon-up" onclick="Util.goTop()"></div>
+
+<script type="text/javascript" src="https://static-solo.b3log.org/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://static-solo.b3log.org/js/common.min.js?1524771016432" charset="utf-8"></script>
+<script type="text/javascript" src="https://static-solo.b3log.org/skins/9IPHP/js/common.min.js?1524771016432" charset="utf-8"></script>
+<script type="text/javascript">
+    var latkeConfig = {
+        "servePath": "https://88250.b3log.org",
+        "staticServePath": "https://static-solo.b3log.org",
+        "isLoggedIn": "false",
+        "userName": ""
+    };
+
+    var Label = {
+        "skinDirName": "9IPHP",
+        "em00Label": ":smile:",
+        "em01Label": ":joy:",
+        "em02Label": ":stuck_out_tongue_winking_eye:",
+        "em03Label": ":persevere:",
+        "em04Label": ":sob:",
+        "em05Label": ":cold_sweat:",
+        "em06Label": ":rage:",
+        "em07Label": ":triumph:",
+        "em08Label": ":eyes:",
+        "em09Label": ":scream:",
+        "em10Label": ":sunglasses:",
+        "em11Label": ":yum:",
+        "em12Label": ":heart:",
+        "em13Label": ":broken_heart:",
+        "em14Label": ":smiling_imp:"
+    };
+
+    Util.parseMarkdown('content-reset');
+</script>
+<script type="text/javascript">
+    (function () {
+        var $groups =  $("a[rel=group]"),
+            $fancybox = $(".fancybox");
+        if ($groups.length > 0 || $fancybox.length > 0) {
+            if (document.createStyleSheet) {
+                document.createStyleSheet("https://static-solo.b3log.org/plugins/fancybox/js/jquery.fancybox.css");
+            } else {
+                $("head").append($("<link rel='stylesheet' href='https://static-solo.b3log.org/plugins/fancybox/js/jquery.fancybox.css' type='text/css' charset='utf-8' />"));
+            }
+
+            $.ajax({
+                url: "https://static-solo.b3log.org/plugins/fancybox/js/jquery.fancybox.pack.js",
+                dataType: "script",
+                cache: true,
+                complete: function() {
+                    $groups.fancybox({
+                        openEffect  : 'none',
+                        closeEffect : 'none',
+                        prevEffect : 'none',
+                        nextEffect : 'none'
+                    });
+                    $fancybox.fancybox({
+                        openEffect  : 'none',
+                        closeEffect : 'none',
+                        prevEffect : 'none',
+                        nextEffect : 'none'
+                    });
+                }
+            });
+        }
+    })();
+</script>
+
+<script type="text/javascript" src="https://static-solo.b3log.org/js/page.min.js?1524771016432" charset="utf-8"></script>
+<script type="text/javascript">
+    var page = new Page({
+        "nameTooLongLabel": "姓名只能为 2 到 20 个字符！",
+        "mailCannotEmptyLabel": "邮箱不能为空！",
+        "mailInvalidLabel": "邮箱格式不正确！",
+        "commentContentCannotEmptyLabel": "评论内容只能为 2 到 500 个字符！",
+        "captchaCannotEmptyLabel": "验证码不能为空！",
+        "loadingLabel": "载入中....",
+        "oId": "1524191993505",
+        "skinDirName": "9IPHP",
+        "blogHost": "https://88250.b3log.org",
+        "randomArticles1Label": "随机阅读：",
+        "externalRelevantArticles1Label": "站外相关阅读："
+    });
+    var replyTo = function (id) {
+        var commentFormHTML = "<table class='form comment-reply' id='replyForm'>";
+        page.addReplyForm(id, commentFormHTML);
+    };
+    (function () {
+        page.load();
+        Skin.initArticle("文章目录", "站点概要");
+        // emotions
+        page.replaceCommentsEm("#comments .content-reset");
+        page.tips.externalRelevantArticlesDisplayCount = "10";
+        page.loadRandomArticles();
+        page.loadExternalRelevantArticles("创业,分享,链书"
+            , "<header class='title'><h2>站外相关阅读</h2></header>");
+        page.loadRelevantArticles('1524191993505', '<h4>相关阅读</h4>');
+    })();
+</script>
+
+
+
+<!-- Generated by Latke (https://github.com/b3log/latke) in 74ms, 2018/04/27 11:36:10 --><span id="play_btn_up" class="play_btn" style="display: none;"></span><span id="play_btn_dn" class="play_btn"></span></body></html>

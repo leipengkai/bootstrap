@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Femn</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Business_Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script type="text/javascript">
+		<!--$(function({-->
+			<!--var $points=$(.navbar-collapse navbar-nav li); 	-->
+			<!--$points.click(function(){-->
+				<!--$(this).addClass('active').siblings().removeClass('active');-->
+			<!--})-->
+		<!--})-->
+		$(document).ready(function(){
+			$("#myNav").affix({
+				offset: { 
+					top: 125 
+			}
+			});
+		});
+	</script>
+
+	<style>
+	/* 下拉按钮样式 */
+	.dropbtn {
+		background-color: white;
+		color: gray;
+		padding: 5px;
+		<!--font-size: 16px;-->
+		<!--width:100%;-->
+		<!--height:88px;-->
+		border: none;
+		cursor: pointer;
+		border-radius:10%;
+	}
+
+	/* 容器 <div> - 需要定位下拉内容 */
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	/* 下拉内容 (默认隐藏) */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		<!--min-width: 160px;-->
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+	.dropdown-content li{
+		display:inline;
+		list-style:none;
+		border-radius:10%;
+
+	}
+
+	/* 下拉菜单的链接 */
+	.dropdown-content a {
+		color: black;
+		padding: 5px 1px;
+		text-decoration: none;
+		display: block;
+	}
+
+	/* 鼠标移上去后修改下拉菜单链接颜色 */
+	.dropdown-content a:hover {background-color:gray;}
+
+	/* 在鼠标移上去后显示下拉菜单 */
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+	.dropdown:hover .dropbtn {
+		background-color: #3e8e41;
+	}
+	.pageindex{
+		margin:10px auto;
+	}
+	.pagination{
+		<!--height:100px;margin-top:-100px;background-color: #ffc0cb;-->
+		position:absolute;bottom:0;width:100%;height:20px;
+	}
+
+	</style>
+</head>
+<body>
+	<!--<div class="header">-->
+	<!--<div class="header-top">-->
+		<!--<div class="container">-->
+		<!--logo-->
+			<!--<div class="logo">-->
+				<!--<a href="index.html">-->
+					<!--<h1>FEMN</h1>-->
+				<!--</a>-->
+			<!--</div>-->
+			<!--<div class="search">-->
+				<!--<form>-->
+					<!--<input type="submit" value="">-->
+				<!--</form>-->
+
+			<!--</div>-->
+		<!--social-->
+		<!--<div class="clearfix"></div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+<!--navbar-->
+	<div class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#togglemenu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<!--<a href="#" class="navbar-brand">LOGO</a>-->
+		</div>
+		
+
+		<div class="collapse navbar-collapse" id="togglemenu">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"><i class="fas fa-home fa-2x" ></i></a></li>
+					<li><a href="#"><i class="fab fa-python fa-2x"></i></a></li>
+					<li><a href="#"><i class="fab fa-linux fa-2x"></i></a></li>
+					<li><a href="#"><i class="fas fa-database fa-2x"></i></a></li>
+					<li><a href="#"><i class="fab fa-docker fa-2x"></i></a></li>
+					<li><a href="#"><i class="fas fa-terminal fa-2x"></i></a></li>
+					<li><a href="#"><i class="fas fa-wrench fa-2x"></i></a></li>
+				</ul>
+				<!-- <button class="btn btn-default navbar-btn">按钮</button> -->
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" name="" class="form-control" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+							<span class="input-group-btn">
+								<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+					</div>
+					<div class="dropdown">
+					<button class="dropbtn"><i class="fas fa-tags fa-lg"></i></button>
+					<div class="dropdown-content">
+							<li ><a href="https://github.com/leipengkai" target="_Blank"><i class="fab fa-github fa-2x"></i></a></li>
+
+							<li ><a href="https://www.facebook.com/profile.php?id=100012089717648" target="_Blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+							
+							<li><a href="https://www.twitter.com/femnyy" target="_Blank"><i class="fab fa-twitter fa-2x"></i></a></li>
+							
+							<li><a href="https://plus.google.com/u/0/114783604010475299582" target="_Blank"><i class="fab fa-google-plus fa-2x"></i></a></li>
+
+							<li><a href="https://hub.docker.com/u/femn/" target="_Blank"><i class="fab fa-docker fa-2x"></i></a></li>
+							
+							<li><a href="https://www.pinterest.ca/leipengkai/" target="_Blank"><i class="fab fa-pinterest fa-2x"></i></a></li>
+
+							<li><a href="https://www.youtube.com" target="_Blank"><i class="fab fa-youtube fa-2x"></i></a></li>
+
+					</div>
+					<!--<div class="btn-group">-->
+						<!--<button type="button" class="btn btn-default dropdown-toggle" -->
+								<!--data-toggle="dropdown">-->
+								<!--<i class="fas fa-tags fa-1x"></i><span class="caret"></span>-->
+						<!--</button>-->
+						<!--<ul class="dropdown-menu" role="menu">-->
+							<!--<li class="divider"></li>-->
+						<!--</ul>-->
+						<!--</div>-->
+				</form>
+		</div>
+	</div>
+
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<h2>Contrary to popular belief, Lorem Ipsum simply</h2>
+		<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+		<a href="#">READ ARTICLE</a>
+	</div>
+</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				
+				<h2 id="section-1">第一部分</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.</p>
+				<p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit at lacus blandit, commodo iaculis justo viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget mi mi. Fusce quam tortor, commodo ac dui quis, bibendum viverra erat. Maecenas mattis lectus enim, quis tincidunt dui molestie euismod. Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus.</p>
+			</div>
+			<div class="col-lg-3">col-lg-3</div>
+			<div class="col-lg-3">col-lg-3</div>
+			<div class="col-lg-3">col-lg-3</div>
+		</div>
+		<br>
+		<br>
+	</div>	
+		<div class="col-xs-9">
+			<hr>
+			<h2 id="section-2">第二部分</h2>
+			<p>Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra interdum bibendum. Donec ac sollicitudin dolor. Sed fringilla vitae lacus at rutrum. Phasellus congue vestibulum ligula sed consequat.</p>
+			<p>Vestibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed. Nam odio tortor, dictum quis malesuada at, pellentesque vitae orci. Vivamus elementum, felis eu auctor lobortis, diam velit egestas lacus, quis fermentum metus ante quis urna. Sed at facilisis libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum bibendum blandit dolor. Nunc orci dolor, molestie nec nibh in, hendrerit tincidunt ante. Vivamus sem augue, hendrerit non sapien in, mollis ornare augue.</p>
+			<hr>
+
+		</div>
+
+	<!--评论-->
+	<!--<div id="container"></div>-->
+	<!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+	<!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
+	<!--<script>-->
+		<!--var gitment = new Gitment({-->
+			<!--id: '页面 ID', // 可选。默认为 location.href-->
+			<!--owner: 'leipengkai',-->
+			<!--repo: 'Gitment',-->
+			<!--oauth: {-->
+				<!--client_id: 'db7acd277311964bc144',-->
+				<!--client_secret: 'a6275d384221e7f2c758aeaf5abb2970484c3102',-->
+			<!--},-->
+		 <!--})-->
+		<!--gitment.render('container'); //container为你要显示评论的id-->
+	<!--</script>-->
+	<div class="pageindex">
+		<ul class="pagination">
+			<li><a href="#">&laquo;</a></li>
+			<li class="active"><a href="#">1</a></li>
+			<li class="disabled"><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</body>
+</html>

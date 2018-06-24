@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+	<!--评论-->
+	<div id="container"></div>
+	<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+	<script>
+	    var gitment = new Gitment({
+			<!--owner: "18700102",-->
+			owner: "femn2014",
+	        repo: "test",
+	        oauth: {
+	            client_id: "07b96ccade1093438dd8",
+	            client_secret: "64154bb50957fd4565cb5d72822c21823b185d2b",
+	        },
+	     })
+	    gitment.render("container"); //container为你要显示评论的id
+	</script>
+	<h2>只能访问一级域名</h2>
+	<h4>通过nginx配置把带www的URL跳转到一级域名kcaogen.com
+		这样访问我的博客URL只会是https://kcaogen.com
+	
+	</h4>
+</body>
+</html>

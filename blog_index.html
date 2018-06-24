@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- ie=edge:表示强制以最新的IE浏览器模式 渲染页面-->
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+    <style>
+        html{
+            font-size: 62.5%;
+            color: #222222;
+        }
+        body{
+            font-size: 1.5rem;
+            color: #f7f7f7;
+            line-height: 1.5;
+        }
+        .clearfix:before,.clearfix:after{
+            content: ' ';
+            display: table;
+        }
+
+        .clearfix:after{
+            clear: both;
+        }
+        /*IE6 IE7*/
+        .clearfix{
+            zoom: 1;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        a:hover,a:active{
+            color: #0ae;
+            text-decoration: underline;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            /*display: inline-block;*/
+        }
+        header{
+            width: 100%;
+            line-height: 3rem;
+            /*text-align: center;*/
+            background: black;
+            padding: 0 1.5rem;
+            border-bottom: 1px  deeppink solid;
+        }
+
+        .main ul {
+            float: left;
+        }
+        .main ul li{
+            display: inline-block;
+        }
+        .main ul li a{
+            display: inline-block;
+            padding: 0 1.5rem;
+            color: #FFFFFF;
+        }
+        /*.main ul li + li{*/
+            /*border-left: 1px solid #999999;*/
+            /*margin-left: -3px;*/
+        /*}*/
+        .social ul{
+            float: right;
+        }
+        .social ul li{
+            display: inline-block;
+        }
+        .social ul li a{
+            display: inline-block;
+            padding: 0 1rem;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<!--https://88250.b3log.org/articles/2017/12/31/1514687638181.html#b3_solo_h3_16-->
+<header class="clearfix">
+    <nav class="main">
+        <ul>
+            <li><a href="#">linux</a></li>
+            <li><a href="#">python</a></li>
+            <li><a href="#">docker</a></li>
+            <li><a href="#">db</a></li>
+            <li><a href="#">drf</a></li>
+            <li><a href="#">bootstarp</a></li>
+        </ul>
+    </nav>
+    <nav class="social">
+        <ul>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">google</a></li>
+            <li><a href="#">docker</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">telegram</a></li>
+        </ul>
+    </nav>
+</header>
+
+<nav>
+    <a>nav</a>
+</nav>
+
+<article>
+    <h3>article</h3>
+</article>
+
+<section>
+    <h3>section</h3>
+</section>
+
+<footer>
+    <h3>footer</h3>
+</footer>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="js/vendor/jquery-3.3.1.js"></script>
+
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+<!--一般都是使用class定义样式(top-button),id一般用于js快速的区别和获取元素class(topButton)-->

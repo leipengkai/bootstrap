@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- ie=edge:表示强制以最新的IE浏览器模式 渲染页面-->
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <!--<link rel="stylesheet" href="css/web-fonts-with-css/css/fontawesome-all.css">-->
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" >
+
+    <style>
+        body {
+            background-color: #002a35 !important;
+            color: #839496 !important;
+            position: relative;
+        }
+        .affix {
+            top: 20px;
+        }
+        div.col-sm-9 div {
+            height: 250px;
+            font-size: 28px;
+        }
+        #section1 {color: #fff; background-color: #1E88E5;}
+        #section2 {color: #fff; background-color: #673ab7;}
+        #section3 {color: #fff; background-color: #ff9800;}
+        #section41 {color: #fff; background-color: #00bcd4;}
+        #section42 {color: #fff; background-color: #009688;}
+
+        @media screen and (max-width: 810px) {
+            #section1, #section2, #section3, #section41, #section42  {
+                margin-left: 150px;
+            }
+        }
+
+        .floatButton {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            z-index: 9999999;
+        }
+
+        /*.article {*/
+            /*!*min-height: calc(100% - 200px);*!*/
+            /*margin-bottom: 50px;*/
+        /*}*/
+        /*.footer {*/
+            /*background: #474E5D;*/
+            /*padding: 15px 0 5px;*/
+            /*font-size: 13px;*/
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*width: 100%;*/
+        /*}*/
+        /*.footer-content {*/
+            /*text-align: center;*/
+            /*color: #8a6d3b;*/
+        /*}*/
+
+        .entry-box {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+        }
+        .entry-box:hover {
+            box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+            border-color: #d6d6d6;
+        }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<!--https://88250.b3log.org/articles/2017/12/31/1514687638181.html#b3_solo_h3_16-->
+<!--Bootstrap 组件 导航 -->
+<header id="header">
+    <nav class="navbar navbar-inverse">
+        <!--navbar-default                     navbar-inverse-->
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    博客
+                    <i class="icon-icon"></i>
+                    <i class="icon-logo"></i>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Docker <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Linux</a></li>
+                    <li><a href="#">Bootstarp</a></li>
+                    <li><a href="#">DB</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Python <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Basic</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Django</a></li>
+                            <li><a href="#">Django-Rest-Framework</a></li>
+                            <li><a href="#">Tonado</a></li>
+                            <li><a href="#">Scrapy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right hidden-sm">
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"> <i class="fab fa-google-plus"></i> </a></li>
+                    <li><a href="#"> <i class="fab fa-docker"></i> </a></li>
+                    <li><a href="#"> <i class="fab fa-github"></i> </a></li>
+                    <li><a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                    <li><a href="#"> <i class="fab fa-telegram"></i> </a></li>
+                    <!--<button type="button" class="btn btn-default">-->
+                        <!--<span class="glyphicon glyphicon-text-color"></span>-->
+                    <!--</button>-->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--Bootstrap JS 滚动监听
+    http://w3schools.wang/try/bootstrap_trybs_scrollspy_affix2.html
+-->
+<div class="container">
+
+    <div id="article-entry" class="entry-box">
+        all article
+        <br>
+        h
+        h
+        h
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <nav class="col-sm-2" id="myScrollspy">
+            <ol class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="305">
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#section41">Section 4-1</a></li>
+                        <li><a href="#section42">Section 4-2</a></li>
+                    </ul>
+                </li>
+            </ol>
+        </nav>
+        <div class="col-sm-10 article">
+            <div id="section1">
+                <h1>Section 1</h1>
+                <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+            </div>
+            <div id="section2">
+                <h1>Section 2</h1>
+                <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+            </div>
+            <div id="section3">
+                <h1>Section 3</h1>
+                <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+            </div>
+            <div id="section41">
+                <h1>Section 4-1</h1>
+                <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+            </div>
+            <div id="section42">
+                <h1>Section 4-2</h1>
+                <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                <h1>hello world</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="btn-group-vertical floatButton">
+    <button id="goTop" class="btn btn-default" title="去顶部" type="button">
+        <span class="glyphicon glyphicon-arrow-up"></span>
+    </button>
+    <button id="refresh" class="btn btn-default" title="刷新" type="button">
+        <span class="glyphicon glyphicon-refresh"></span>
+    </button>
+    <button id="goBottom" class="btn btn-default" title="去底部" type="button">
+        <span class="glyphicon glyphicon-arrow-down"></span>
+    </button>
+</div>
+<br>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="js/vendor/jquery-3.3.1.js"></script>
+
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/blog.js"></script>
+</body>
+</html>
+<!--一般都是使用class定义样式(top-button),id一般用于js快速的区别和获取元素class(topButton)-->
+
+<!--<div class="footer">-->
+<!--<p class="footer-content">-->
+<!--@2017-->
+<!--<a target="_blank" href="https://github.com/leipengkai/dt_blog">dt_blog</a>-->
+<!-- -开源的分布式博客系统-->
+<!--{% if not current_user %}-->
+<!-- -<a href="{{ handler.login_url() }}">-->
+<!--<span class="glyphicon glyphicon-wrench">后台管理</span>-->
+<!--</a>-->
+<!--{% end %}-->
+<!--</p>-->
+<!--</div>-->
